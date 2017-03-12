@@ -1,0 +1,19 @@
+{
+  "name": "freecodecamp-header-parser",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp Request Header Parser Microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawChihLiou/freecodcamp-header-parser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DawChihLiou/freecodcamp-header-parser/issues"
+  },
+  "homepage": "https://github.com/DawChihLiou/freecodcamp-header-parser#readme"
+}
