@@ -9754,7 +9754,7 @@ module.exports = __webpack_require__(100);
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/ubuntu/workspace/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/ubuntu/workspace/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -9771,9 +9771,79 @@ var UserInfo = function UserInfo(_ref) {
         language = _ref.language,
         software = _ref.software;
     return _react2.default.createElement(
-        'div',
-        null,
-        'it\'s me again'
+        "div",
+        { className: "wrap" },
+        _react2.default.createElement(
+            "h1",
+            null,
+            "Request Header Parser Micro Service"
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+                "div",
+                { className: "col-sm" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "IP Address"
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "col-big" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    ipaddress
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+                "div",
+                { className: "col-sm" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Language"
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "col-big" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    language
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "row" },
+            _react2.default.createElement(
+                "div",
+                { className: "col-sm" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Operating System"
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "col-big" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    software
+                )
+            )
+        )
     );
 };
 
