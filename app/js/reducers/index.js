@@ -1,12 +1,23 @@
-const dummy = {
-    "ipaddress":"88.130.232.50",
-    "language":"en-US",
-    "software":"Macintosh; Intel Mac OS X 10_12_3"
-};
+import {REQUEST_INFO, RECEIVE_INFO} from '../actions';
 
-const reducer = (state=dummy, action) => {
+const defaultMsg = 'Click the buttom to see!';
+
+const reducer = (state={info: {
+    ipaddress: defaultMsg,
+    language: defaultMsg,
+    software: defaultMsg
+}, isFetching: false}, action) => {
   switch (action.type) {
-      default: 
+    case REQUEST_INFO:
+        return Object.assign({}, state, {
+            isFetching: true
+        });
+    case RECEIVE_INFO:
+        return Object.assign({},state, {
+            isFetching: false,
+            info: action.info
+        });    
+    default: 
         return state;
   }  
 };

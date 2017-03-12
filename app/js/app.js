@@ -1,11 +1,17 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import reducer from './reducers';
 import UserInfo from './containers/UserInfo';
 
-const store = createStore(reducer);
+import {fetchInfo} from './actions'
+
+const store = createStore(
+    reducer,
+    applyMiddleware(thunkMiddleware)
+);
 
 render(
     <Provider store={store}>
