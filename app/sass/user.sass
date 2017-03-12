@@ -1,0 +1,29 @@
+$background-color: #fcfcfc
+$border-color: #d0d0d0
+$hover-color: #f2f2f2
+
+html, body
+    background-color: $background-color
+    
+    .row
+        margin-top: 1em
+        
+    .row-data
+        border-bottom: 1px solid $border-color
+        padding-top: .8em
+        padding-bottom: .8em
+    
+        &:hover
+            background-color: $hover-color
+        
+        .spin
+            animation-name: spin
+            animation-duration: 1.5s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        
+            @keyframes spin
+                from 
+                    transform: rotate(0deg)
+                to
+                    transform: rotate(360deg)

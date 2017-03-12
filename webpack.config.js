@@ -1,3 +1,5 @@
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -18,12 +20,30 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json']
     },
+    devtool: 'inline-source-map',
     module: {
         loaders: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loaders: ['react-hot-loader', 'babel-loader']
+            },
+            {
+                test: /\.sass$/,
+                use: [
+                    'style-loader',
+                    'css-loader?importLoaders=1?sourceMap',
+                    {
+                        loader:'postcss-loader',
+                        options: {
+                            plugins: function() {
+                                return [autoprefixer, precss];
+                            }
+                        }
+                    },
+                    'sass-loader?sourceMap'
+                    
+                ]
             }
         ]
     },
