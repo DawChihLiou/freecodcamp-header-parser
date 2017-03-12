@@ -1,6 +1,7 @@
 const express = require('express');
 
 const app = express();
+const port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/dist'));
 
@@ -28,6 +29,6 @@ app.get('/api/userinfo', function(req, res) {
     res.send(result)
 });
 
-app.listen(8080, function() {
-   console.log('Server is listening port 8080'); 
+app.listen(port, function() {
+   console.log('Server is listening port ' + port); 
 });
