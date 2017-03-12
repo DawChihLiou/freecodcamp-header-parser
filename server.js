@@ -7,6 +7,14 @@ app.get('/', function(req, res) {
     res.send('Heck YAH!!');
 });
 
+/**
+ * Get Client information including IP address, language, and operating system.
+ * 
+ * References:
+ *  1. http://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node
+ *  2. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+ *  3. http://stackoverflow.com/questions/1326928/how-can-i-get-client-infomation-such-as-os-and-browser
+ */
 app.get('/api/userinfo', function(req, res) {
     const ipaddress = req.get('x-forwarded-for');
     const language = req.get('accept-language').match(/[a-z]{2}-[A-Z]{2}/g)[0];
