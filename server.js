@@ -4,8 +4,10 @@ const app = express();
 
 app.use(express.static(__dirname + '/dist'));
 
+/**
+ * Render landing page 
+ */
 app.get('/', function(req, res) {
-   // front page 
     res.render(__dirname + '/index.html');
 });
 
