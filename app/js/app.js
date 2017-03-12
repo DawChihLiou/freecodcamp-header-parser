@@ -1,7 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom';
-import UserInfo from './components/UserInfo';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import reducer from './reducers';
+import UserInfo from './containers/UserInfo';
+
+const store = createStore(reducer);
 
 render(
-    <UserInfo ipaddress="1.1.1.1" language="en-US" software="Mac" />
-, document.getElementById('app'));
+    <Provider store={store}>
+        <UserInfo />
+    </Provider>, 
+    document.getElementById('app'));

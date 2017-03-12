@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserInfo = ({ipaddress, language, software}) => (
+const User = ({ipaddress, language, software}) => (
     <div className="wrap">
         <h1>Request Header Parser Micro Service</h1>
         <div className="row">
@@ -30,4 +30,4 @@ const UserInfo = ({ipaddress, language, software}) => (
     </div>
 );
 
-export default UserInfo;
+export default User;
